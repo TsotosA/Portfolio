@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+/* MOBILE VIEW FIRST */
+.grid {
+  display: grid;
+  /*grid-gap: 5px;*/
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "header"
+  "about-text"
+  "about-cloud"
+  "skills"
+  "portfolio"
+  "contact"
+  "map"
+  "footer";
+}
+
+/*.header, .about-cloud, .about-text, .portfolio {
+  height: 100vh;
+}*/
+
+.header {
+  grid-area: header;
+  background-color: #4b4c4c;
+  height: 30vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  position: relative;
+}
+
+.about-cloud {
+  grid-area: about-cloud;
+  background-image: url(/img/portrait2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 25vh;
+  max-height: 70vh;
+}
+.about-text {
+  grid-area: about-text;
+  /*min-height: 70vh;*/
+}
+.portfolio {
+  grid-area: portfolio;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  background-color: grey;
+  height: 100vh;
+  /*grid-gap: 5px;*/
+}
+
+.portfolio-item.one, .portfolio-item.two, .portfolio-item.three, .portfolio-item.five, .portfolio-item.six, .portfolio-item.seven  {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-image: url("http://res.cloudinary.com/alxt/image/upload/v1505853407/Coding/ilya-pavlov-87438.jpg");
+  background-size: cover;
+}
+
+.skills {
+  grid-area: skills;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: grid;
+  /*grid-template-columns: repeat(6, 1fr);*/
+  /*max-width: 100VW;*/
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  padding: 0;
+  margin: 0;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: #4b4c4c;
+  overflow: hidden;
+}
+.map {
+  grid-area: map;
+  height: 150px;
+  background-color: grey;
+}
+.footer {
+  grid-area: footer;
+  background-color: #4b4c4c;
+  border-right: red solid 10px;
+  border-top: red solid 1px;
+}
+
+/*svg {
+  background-size: contain;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  border-radius: 5%;
+}*/
+
+#wordCloud {
+  background-color: transparent;
+  width: 100%;
+}
+
+#logoNodeJs, #logoJs, #logoJava, #logoHtml, #logoCss, #logoJq{
+  background-color: transparent;
+  filter: grayscale(100%);
+  width: 100%
+}
+#logoNodeJs:hover, #logoJs:hover, #logoJava:hover, #logoHtml:hover, #logoCss:hover, #logoJq:hover{
+  background-color: transparent;
+  filter: grayscale(0%);
+}
+
+.footer p, .footer i {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  opacity: 0.7;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contact h1 {
+  color: white;
+  text-align: center;
+  font-size: 8vw;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.05);
+}
+
+.map iframe {
+  filter: grayscale(70%);
+}
+
+.about-text h1 {
+  border-right: solid 10px red;
+  border-left: solid 10px red;
+  text-align: center;
+  margin: 10px 20px 0 20px;
+  padding: 0;
+  font-size: 6vw;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .closeBtn a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.fa.fa-bars {
+  font-size: 6vh;
+  padding: 20px;
+  z-index: 99;
+  color: red;
+  position: fixed;
+  top: 0;
+  right: 45px;
+}
+
+#myBigScreenNav {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.logo {
+  height: 80%;
+  margin: 4vh 0 0 0;
+  background-image: url(/img/at-logo-v3.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+@media screen and (min-width: 425px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "about-text about-text about-cloud"
+    "skills skills skills"
+    "portfolio portfolio portfolio"
+    "contact contact contact"
+    "map map map"
+    "footer footer footer";
+  }
+
+  .portfolio {
+    grid-auto-flow: dense;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .portfolio-item.one {
+    grid-row: span 2;
+    grid-column: span 4;
+  }
+  .portfolio-item.two {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .portfolio-item.three {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .portfolio-item.four {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .portfolio-item.five {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .portfolio-item.six {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .portfolio-item.seven {
+    grid-row: span 2;
+    grid-column: span 4;
+  }
+  #myNav, #faBars {
+    display: none;
+  }
+
+  #myBigScreenNav {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border-left: red solid 10px;
+    border-bottom: red solid 1px;
+    color: white;
+    z-index: 300;
+    position: fixed;
+    width: 100%;
+    /*padding-top: 3vh;*/
+  }
+  #myBigScreenNav ul {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: right;
+    padding: 5px 5px 0 5px;
+  }
+  #myBigScreenNav ul li{
+    list-style-type: none;
+    display: inline;
+    font-size: 3vh;
+    margin-right:  20px;
+    border-radius: 4px;
+  }
+  #myBigScreenNav ul li a:hover {
+    background-color: red;
+    border-radius: 3px 3px 0 0;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  /*#myBigScreenNav + .sticky {
+    padding-top: 50px;
+  }*/
+}
