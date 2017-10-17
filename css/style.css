@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Raleway', 'Montserrat', sans-serif;
   font-weight: 400;
-  /*background-color: black;*/
+  background-color: black;
 }
 
 /* MOBILE VIEW FIRST */
@@ -43,7 +43,7 @@ body {
 
 .about-text {
   grid-area: about-text;
-  /*color: white;*/
+  color: white;
 }
 
 .portfolio {
