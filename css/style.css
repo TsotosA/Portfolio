@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Raleway', 'Montserrat', sans-serif;
   font-weight: 400;
-  background-color: #4b4c4c;
+  background-color: #595858;
   background-image: url(../img/portrait3.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,9 +31,10 @@ body {
   grid-area: header;
   background-color: black;
   height: 30vh;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
   position: relative;
+    opacity: 0.9;
 }
 
 .about-text {
@@ -73,14 +74,16 @@ body {
   grid-area: map;
   height: 100px;
   background-color: grey;
-  opacity: 0.6;
+  opacity: 1;
+  filter: grayscale(100%);
+  filter: contrast(200%);
 }
 
 .footer {
   grid-area: footer;
   background-color: #4b4c4c;
-  border-right: red solid 10px;
-  border-top: red solid 1px;
+  border-right: white solid 10px;
+  border-top: white solid 1px;
 }
 
 .portfolio-item.one, .portfolio-item.two, .portfolio-item.three, .portfolio-item.five, .portfolio-item.six, .portfolio-item.seven  {
@@ -160,11 +163,15 @@ a {
 
 .about-text h1 {
   /*border-right: solid 10px red;*/
-  border-left: solid 10px red;
-  text-align: left;
+  /*border-left: solid 10px red;*/
+  text-align: center;
   margin: 10px 20px 0 20px;
   padding: 0;
   font-size: 6vw;
+}
+
+.about-text p {
+  text-align: center;
 }
 
 .overlay {
@@ -290,8 +297,8 @@ a {
     display: block;
     padding: 0;
     margin: 0;
-    border-left: red solid 10px;
-    border-bottom: red solid 1px;
+    border-left: white solid 10px;
+    border-bottom: white solid 1px;
     color: white;
     z-index: 300;
     position: fixed;
@@ -321,9 +328,6 @@ a {
     top: 0;
     width: 100%;
   }
-  /*a[href="contact"] {
-    display: none;
-  }*/
 }
 
 @media screen and (min-width: 1024px) {
