@@ -109,9 +109,8 @@ body {
   font-size: 7vw;
 
 }
-ul span li a{
-  font-size: 2vh;
-  opacity: .5;
+#social {
+  float: left;
 }
 
 #logoNodeJs, #logoJs, #logoJava, #logoHtml, #logoCss, #logoJq{
@@ -322,8 +321,8 @@ a {
   #myBigScreenNav ul li{
     list-style-type: none;
     display: inline;
-    font-size: 3vh;
-    margin-right:  20px;
+    font-size: 23px;
+    margin-right:  5px;
     border-radius: 4px;
   }
   #myBigScreenNav ul li a:hover {
