@@ -168,10 +168,18 @@ a {
   margin: 10px 20px 0 20px;
   padding: 0;
   font-size: 6vw;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .about-text p {
   text-align: center;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .overlay {
