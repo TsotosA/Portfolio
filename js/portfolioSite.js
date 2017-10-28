@@ -1,7 +1,7 @@
 //TYPING EFFECT - TYPED.JS//
 var options = {
   strings: ["FrontEnd Designer!", "FrontEnd Web Dev!"],
-  typeSpeed: 100,
+  typeSpeed: 150,
   smartBackspace: true,
   loop: true,
   loopCount: 1
