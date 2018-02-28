@@ -130,5 +130,11 @@
   .home-hero {
     height: calc(70vh - 60px);
   }
+
+  .skills {
+    padding-top: 0;
+  }
 }
+
+
 

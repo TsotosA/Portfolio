@@ -30,16 +30,21 @@
   width: 60vw;
   min-width: 250px;
   margin: 2% auto 2% auto !important;
+  text-align: left;
   /* margin: 5%; */
 }
 
 .card-wrapper {
   /* padding: 0 !important; */
-  padding-top: 10%;
+  padding-top: 15%;
   padding-bottom: 10px;
   /* margin: 0 !important; */
   /* margin-top: 20% !important; */
   /* display: flex; */
+}
+
+.card-reveal {
+  background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* .cards {
@@ -59,5 +64,9 @@
     max-width: 400px;
     display: inline-block;
     overflow: hidden !important;
+  }
+
+  .card-wrapper {
+    padding-top: 5%;
   }
 }
