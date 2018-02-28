@@ -1,147 +1,266 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Tsotos Alexandros</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body onscroll= stickyNavBar()>
-    <div class="grid">
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <li><a href="#header" onclick="closeNav()">Home</a></li>
-          <li><a href="#portfolio" onclick="closeNav()">Portfolio</a></li>
-          <li><a href="#contact" onclick="closeNav()">Contact</a></li>
-        </div>
-      </div>
-      <span onclick="openNav()" id="faBars"><i class="fa fa-bars" aria-hidden="true"></i></span>
-      <div id="myBigScreenNav">
-        <ul>
-          <li><a href="#header" onclick="smoothScroll('header');">Home</a></li>
-          <li><a href="#portfolio" onclick="smoothScroll('portfolio');">MyWork</a></li>
-          <li><a href="#contact" onclick="smoothScroll('contact');">GetInTouch</a></li>
-          <!-- <span id="social">
-            <li> <a href="https://www.linkedin.com/in/alexandros-tsotos-71887455" target="_blank" rel="noopener"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-            <li> <a href="https://github.com/TsotosA" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-            <li> <a href="https://codepen.io/AlxT/" target="_blank" rel="noopener"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
-          <li> <a href="https://codepen.io/AlxT/" target="_blank" rel="noopener">CV</a></li>
-        </span> -->
-        </ul>
-      </div>
-      <div class="header" id="header">
-        <div class="logo">
-        </div>
-      </div>
-      <div class="about-text">
-        <h1>
-          <span class="typed"></span>
-        </h1>
-        <p>
-          <br>
-          Hi i am Alex!
-          <br>
-          A Mechanical Engineer gone Web Developer - Programmer to follow my passion
-        </p>
-      </div>
-      <div class="portfolio" id="portfolio">
-        <div class="portfolio-item one">
-          <div id="portfolio-thumbnail">
-            <a href="https://tsotosa.github.io/portfolio/" target="_blank">
-              <div id="background"></div>
-              <h1>Personal Portfolio Web Site</h1>
-              <div id="portfolio-thumbnail-overlay">
-                <p>
-                  My personal portfolio site, showcasing my work and reflecting my personality. Handcoded with love!
-                </p>
-                <div id="portfolio-thumbnail-list-container">
-                  <ul id="portfolio-thumbnail-list">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Responsive</li>
-                  </ul>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/smallScreenNav.css">
+    <link rel="stylesheet" href="css/bigScreenNav.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="js/tooltipster-master/dist/css/tooltipster.bundle.min.css" />
+    <!-- <link rel="stylesheet" href="js/tooltipster-master/dist/css/tooltipster-sideTip-punk.min.css" /> -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:300,400,700,900&amp;subset=greek,greek-ext,latin-ext"
+        rel="stylesheet">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div id="root">
+        <!--MOBILE NAV-->
+        <div class="mobile">
+            <nav id="mobile-nav">
+                <div class="button">
+                    <a class="btn-open"></a>
                 </div>
-             </div>
-            </a>
-          </div>
+            </nav>
         </div>
-        <div class="portfolio-item two">
-          <div id="portfolio-thumbnail">
-            <a href="https://tsotosa.github.io/portfolio/" target="_blank">
-              <div id="background"></div>
-              <h1>Law Firm Web Site</h1>
-              <div id="portfolio-thumbnail-overlay">
-                <p>
-                  A fully responsive Law Firm Web Site
-                </p>
-                <div id="portfolio-thumbnail-list-container">
-                  <ul id="portfolio-thumbnail-list">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                  </ul>
+
+        <div class="overlay">
+            <div class="wrap">
+                <div class="logo">
+                        <img src="/img/at-logo-v3.png" alt="">
                 </div>
-             </div>
-            </a>
-          </div>
+                <ul class="wrap-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="portfolio-item three">Three</div>
-        <div class="portfolio-item four">
-          <h1 id="portfolioText">Portfolio</h1>
-        </div>
-        <div class="portfolio-item five">Five</div>
-        <div class="portfolio-item six">Six</div>
-        <div class="portfolio-item seven">
-          <div id="portfolio-thumbnail">
-            <a href="https://tsotosa.github.io/portfolio/" target="_blank">
-              <div id="background"></div>
-              <h1>Law Firm Web Site</h1>
-              <div id="portfolio-thumbnail-overlay">
-                <p>
-                  A fully responsive Law Firm Web Site
-                </p>
-                <div id="portfolio-thumbnail-list-container">
-                  <ul id="portfolio-thumbnail-list">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                  </ul>
+        <!-- NAV -->
+        <div class="navbar-fixed" id="navbar">
+            <nav id="nav">
+                <div class="nav-wrapper">
+                    <a href="#nav" class="brand-logo">
+                        <img src="/img/at-logo-v3.png" alt="">
+                    </a>
+                    <ul class="right">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#about">AboutMe</a>
+                        </li>
+                    </ul>
                 </div>
-             </div>
-            </a>
-          </div>
+            </nav>
         </div>
-      </div>
-      <div class="skills">
-        <embed id="logoHtml" src="/portfolio/img/html5.svg" alt="logoHtml">
-        <embed id="logoCss" src="/portfolio/img/css3.svg" alt="logoCss">
-        <embed id="logoJs" src="/portfolio/img/javascript.svg" alt="logoJs">
-        <embed id="logoJq" src="/portfolio/img/jquery.svg" alt="logoJq">
-        <embed id="logoNodeJs" src="/portfolio/img/nodejs.svg" alt="logoNodeJs">
-        <embed id="logoJava" src="/portfolio/img/java.svg" alt="logoJava">
-        <embed id="logoBootstrap" src="/portfolio/img/bootstrap.svg" alt="logoBootstrap">
-      </div>
-      <div class="contact" id="contact">
-        <a href="mailto:tsotosa@gmail.com"><h1 class="grow">tsotosa<i class="fa fa-at" aria-hidden="true"></i>gmail.com</h1></a>
-      </div>
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50310.60400155217!2d23.703320006361416!3d37.990832008380444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd1f067043f1%3A0x2736354576668ddd!2zzpHOuM6uzr3OsQ!5e0!3m2!1sel!2sgr!4v1507321304300" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
-      <div class="footer">
-        <p>
-           Alexandros Tsotos Copyright 2017 <i class="fa fa-copyright" aria-hidden="true"></i>
-          <!-- <br> -->
-           Special Thanks to: <a href="https://github.com/mattboldt/typed.js/" target="_blank" rel="noopener">Typed.js</a>
-           <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener"> - MDN</a>
-        </p>
-      </div>
+        <!-- HOME -->
+        <div class="home">
+            <div class="home-hero">
+                <div class="home-hero-text">
+                    <h1>Welcome! I am Alexandros
+                        <br/>
+                        <span id="fsd">Entry-Level Full-Stack Developer</span>
+                    </h1>
+                </div>
+                <div class="home-hero-social">
+                    <ul class="social">
+                        <li>
+                            <a href="https://github.com/TsotosA" target="_blank" rel="noopener noreferrer" class="tooltip" title="See My GitHub Profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/alexandrostsotos" target="_blank" rel="noopener noreferrer" class="tooltip" title="See My LinkeIn Profile">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:tsotoa@hotmail.com" class="tooltip" title="Email Me">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cv.html#view=Fit" target="_blank" rel="noopener noreferrer" class="tooltip" title="See My CV">
+                                <i class="far fa-file-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="home-skills" id="skills">
+                <div class="home-skills-title">
+                    <p>Skills</p>
+                </div>
+                <div class="home-skills-skills">
+                    <ul class="skills">
+                        <li>
+                            <img src="/img/java.svg" alt="java" title="Java" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/js.svg" alt="javascript" title="JavaScript" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/html5.svg" alt="html5" title="HTML5" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/css3.svg" alt="css3" title="CSS3" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/nodejs.svg" alt="nodejs" title="NodeJs" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/jquery.svg" alt="jquery" title="JQuery" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/bootstrap.svg" alt="bootstrap" title="Bootstrap" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/spring.svg" alt="spring" title="Spring Java Framework" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/nginx.jpg" alt="NginX" title="NginX Web Server" class="tooltip">
+                        </li>
+                        <li>
+                            <img src="/img/python.svg" alt="Python" title="Python" class="tooltip">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO -->
+        <div class="portfolio" id="portfolio">
+            <div class="portfolio-title">
+                <p>Portfolio</p>
+            </div>
+            <div class="card-wrapper center-align">
+                <div class="card sticky-action">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/code.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Personal Portfolio Web-Site
+                            <i class="material-icons right">more_vert</i>
+                        </span>
+                        <p>
+                            <a href="#">Source Code (GitHub)</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Info
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>A Static Personal portfolio web site hand coded with love!
+                            <br/>
+                            <br/> HTML5 - CSS3 - Javascript - Materialise - FontAwesome</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Go To Live Site</a>
+                    </div>
+                </div>
+
+                <div class="card sticky-action">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/image.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Personal Portfolio Web-Site
+                            <i class="material-icons right">more_vert</i>
+                        </span>
+                        <p>
+                            <a href="#">Source Code (GitHub)</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Info
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>A Static Personal portfolio web site hand coded with love!
+                            <br/>
+                            <br/> HTML5 - CSS3 - Javascript - Materialise - FontAwesome</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Go To Live Site</a>
+                    </div>
+                </div>
+
+                <div class="card sticky-action">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/image.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title
+                            <i class="material-icons right">more_vert</i>
+                        </span>
+                        <p>
+                            <a href="#">This is a link</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ABOUT ME -->
+        <div class="about" id="about">
+            <div class="about-title">
+                <p>About Me</p>
+            </div>
+            <ul class="about-list">
+                <li>In a nutshell,
+                    <br/> Alex ... </li>
+                <li>
+                    <br/>
+                </li>
+                <li>Lives in Greece</li>
+                <li>Is a Mechanical Engineer by education, gone Programmer following his passion</li>
+                <li>Enjoys Writing Code and solving problems</li>
+                <li>In his free time he Rides his Bike around the World</li>
+            </ul>
+        </div>
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>Alexandros Tsotos Copyright 2018
+                <i class="far fa-copyright" aria-hidden="true"></i>
+            </p>
+        </div>
     </div>
-    <script type="text/javascript" src="assets/typed.js"></script>
-    <script type="text/javascript" src="js/portfolioSite.js"></script>
-  </body>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+
 </html>
