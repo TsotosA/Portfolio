@@ -155,7 +155,12 @@ li {
 @media screen and (max-width: 800px) {
   .navbar-fixed {
     display: none !important;
+    /* visibility: hidden !important; */
   }
+
+  /* #root {
+    background-color: #0288d1 !important;
+  } */
 }
 
 /* .content {

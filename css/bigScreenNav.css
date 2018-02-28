@@ -5,6 +5,7 @@
   transition: all .5s ease-in-out;
   height: 90px;
   font-size: 2rem !important;
+  position: fixed;
 }
 
 .brand-logo > img {
