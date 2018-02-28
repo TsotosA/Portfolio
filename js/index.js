@@ -36,3 +36,13 @@ $(document).ready(function () {
         theme: "tooltipster-punk"
     });
 });
+
+// FADEIN
+$(document).ready(function () {
+  $(".social").fadeIn(2000, 'linear');
+});
+
+// TYPEDJS
+// $(document).ready(function () {
+  
+// });
