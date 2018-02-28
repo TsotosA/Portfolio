@@ -84,6 +84,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-top: 3px #FF5722 solid;
+  z-index: 1000;
 }
 
 .home-skills-title p {
