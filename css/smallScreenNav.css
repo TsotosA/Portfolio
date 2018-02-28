@@ -106,9 +106,9 @@ li {
 }
 .wrap ul.wrap-nav li {
   font-size: 20px;
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: top;
-  width: 24%;
+  width: 100%;
   position: relative;
 }
 .wrap ul.wrap-nav li a {
