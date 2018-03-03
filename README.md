@@ -1,5 +1,5 @@
 # Portfolio
 
-https://tsotosa.github.io/portfolio/
+http://www.tsotos.tech
 
 An ongoing personal portfolio project in the making
