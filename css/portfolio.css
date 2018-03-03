@@ -1,5 +1,5 @@
 .portfolio {
-  width: 100vw; /* height: 100vh; */
+  width: 100vw;
   padding: 0 0 0 0;
   margin: 0;
   background-color: #fcfcfc;
@@ -32,33 +32,16 @@
   min-width: 250px;
   margin: 2% auto 2% auto !important;
   text-align: left;
-  /* margin: 5%; */
 }
 
 .card-wrapper {
-  /* padding: 0 !important; */
   padding-top: 15%;
   padding-bottom: 10px;
-  /* margin: 0 !important; */
-  /* margin-top: 20% !important; */
-  /* display: flex; */
 }
 
 .card-reveal {
   background-color: rgba(255, 255, 255, 0.9) !important;
 }
-
-/* .cards {
-  padding: 0;
-  margin: 0;
-  display: block;
-} */
-
-/* .card-image>img {
-  width: auto;
-  height: 100%;
-  background-size: cover;
-} */
 
 @media screen and (min-width: 800px) {
   .card {

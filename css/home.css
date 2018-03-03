@@ -2,7 +2,6 @@
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
-  /* height: calc(100vh - 60px); */
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -14,13 +13,12 @@
   position: relative;
   padding: 0%;
   margin: 0%;
-  /* height: calc(70vh - 60px); */
 }
 
 .home-skills {
   width: 100vw;
   height: 30vh;
-  background-color: #BDBDBD;
+  background-color: #bdbdbd;
 }
 
 .home-hero-text {
@@ -64,7 +62,6 @@
 .social li a {
   color: rgb(207, 207, 207);
   padding: 7px;
-  /* text-align: center; */
 }
 
 .social li a:hover {
@@ -84,7 +81,7 @@
   top: 23px;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-top: 3px #FF5722 solid;
+  border-top: 3px #ff5722 solid;
   z-index: 1000;
 }
 
@@ -96,8 +93,6 @@
   line-height: 1em;
 }
 .skills {
-  /* width: 100vw; */
-  /* color: #fff; */
   margin: 0;
   padding: 0;
   padding-top: 10%;
@@ -117,7 +112,6 @@
   width: auto;
   height: 6vh;
   min-width: 10px !important;
-  /* max-width: 65px; */
   margin: 3px;
 }
 #fsd {
@@ -137,6 +131,3 @@
     padding-top: 0;
   }
 }
-
-
-
