@@ -68,7 +68,7 @@
 }
 
 .social li a:hover {
-  border-bottom: 2px #fff solid;
+  /* border-bottom: 2px #fff solid; */
   color: #fff;
 }
 
@@ -81,7 +81,7 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 20px;
+  top: 23px;
   left: 50%;
   transform: translate(-50%, -50%);
   border-top: 3px #FF5722 solid;

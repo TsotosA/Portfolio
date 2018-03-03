@@ -24,8 +24,10 @@ $(document).ready(function() {
 
     if (scrollTop >= 64) {
       $("#navbar nav").addClass("scrolled-nav");
+      $("#nav ul li a").addClass("scrolled-nav-a");
     } else if (scrollTop < 65) {
       $("#navbar nav").removeClass("scrolled-nav");
+      $("#nav ul li a").removeClass("scrolled-nav-a");
     }
   });
 });
@@ -33,13 +35,16 @@ $(document).ready(function() {
 // TOOLTIP
 $(document).ready(function () {
     $(".tooltip").tooltipster({
-        theme: "tooltipster-punk"
+        theme: 'punk',
+        side: ['bottom', 'top', 'left', 'right'],
+        animation: 'grow',
+        animationDuration: 350
     });
 });
 
 // FADEIN
 $(document).ready(function () {
-  $(".social").fadeIn(2000, 'linear');
+  $(".social").fadeIn(3000, 'linear');
 });
 
 // TYPEDJS
