@@ -1,7 +1,7 @@
 .about {
   position: relative;
   padding: 0 0 0 0;
-  background-color: #03a9f4;
+  background-color: var(--backgoundColorBlueLight);
   margin: 0;
   color: #fff;
   background-image: url(../img/portrait3.png);

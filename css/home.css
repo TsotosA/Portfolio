@@ -9,7 +9,7 @@
 .home-hero {
   width: 100vw;
   height: 70vh;
-  background-color: #0288d1;
+  background-color: var(--backgoundColorBlue);
   position: relative;
   padding: 0%;
   margin: 0%;
@@ -18,7 +18,7 @@
 .home-skills {
   width: 100vw;
   height: 30vh;
-  background-color: #bdbdbd;
+  background-color: var(--backgoundColorGrey);
 }
 
 .home-hero-text {
@@ -137,6 +137,6 @@
   }
 
   .home-hero-text h1{
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
