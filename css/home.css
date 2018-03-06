@@ -37,7 +37,7 @@
   margin: 0;
   padding: 0;
   padding-top: 10%;
-  font-size: 3em;
+  font-size: 7vw;
 }
 
 .social {
@@ -119,6 +119,11 @@
   font-size: 0.5em;
 }
 
+/* DEV */
+
+
+/* DEV */
+
 @media screen and (min-width: 800px) {
   .home {
     height: calc(100vh - 60px);
@@ -129,5 +134,9 @@
 
   .skills {
     padding-top: 0;
+  }
+
+  .home-hero-text h1{
+    font-size: 5vw;
   }
 }
